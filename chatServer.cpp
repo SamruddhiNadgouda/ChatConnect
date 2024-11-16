@@ -32,7 +32,7 @@ int main()
 	sockaddr_in hint;
 	hint.sin_family = AF_INET;
 	hint.sin_port = htons(54000);
-	hint.sin_addr.S_un.S_addr = INADDR_ANY; // Could also use inet_pton .... 
+	hint.sin_addr.S_un.S_addr = INADDR_ANY; 
 	
 	bind(listening, (sockaddr*)&hint, sizeof(hint));
 
@@ -45,9 +45,7 @@ int main()
 
 	FD_SET(listening, &master);
 
-	// this will be changed by the \quit command (see below, bonus not in video!)
 	bool running = true; 
-
 	while (running)
 	{
 		fd_set copy = master;
@@ -71,7 +69,7 @@ int main()
 				FD_SET(client, &master);
 
 				// Send a welcome message to the connected client
-				string welcomeMsg = "Welcome to the Awesome Chat Server!\r\n";
+				string welcomeMsg = "Welcome to the ChatConnect Server!\r\n";
 				send(client, welcomeMsg.c_str(), welcomeMsg.size() + 1, 0);
 			}
 			else // It's an inbound message
