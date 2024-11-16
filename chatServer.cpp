@@ -89,12 +89,12 @@ int main()
 				}
 				else
 				{
-					// Check to see if it's a command. \quit kills the server
+					// Check to see if it's a command. \exit kills the server
 					if (buf[0] == '\\')
 					{
-						// Is the command quit? 
+						// Is the command exit? 
 						string cmd = string(buf, bytesIn);
-						if (cmd == "\\quit")
+						if (cmd == "\\exit")
 						{
 							running = false;
 							break;
