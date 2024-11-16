@@ -10,4 +10,4 @@ A multi-client chatroom server in C++ using Winsock for real-time messaging betw
 ##### Putty (as a client): 
   - Putty, a popular SSH and Telnet client, to connect to chatconnect server.
   - Putty connects to the server, acting as a client, and allows to send messages to each connected client.
-  - To quit the server, type \quit in any connected client's terminal.
+  - To quit the server, type \exit in any connected client's terminal.
